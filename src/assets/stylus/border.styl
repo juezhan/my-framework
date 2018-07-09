@@ -1,0 +1,64 @@
+
+setTopLine(c = $color-border)
+  content " "
+  position absolute
+  left 0
+  top 0
+  right 0
+  height 1px
+  border-top 1px solid c
+  color c
+  transform-origin 0 0
+  @media (-webkit-min-device-pixel-ratio: 2),(min-device-pixel-ratio: 2)
+    transform scaleY(0.5)
+  @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3)
+    transform scaleY(0.75)
+
+setBottomLine(c = $color-border)
+  content " "
+  position absolute
+  left 0
+  bottom 0
+  right 0
+  height 1px
+  border-bottom 1px solid c
+  color c
+  transform-origin 0 100%
+  transform scaleY(0.5)
+  @media (-webkit-min-device-pixel-ratio: 2),(min-device-pixel-ratio: 2)
+    transform scaleY(0.5)
+  @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3)
+    transform scaleY(0.75)
+
+setLeftLine(c = $color-border)
+  content " "
+  position absolute
+  left 0
+  top 0
+  width 1px
+  bottom 0
+  border-left 1px solid c
+  color c
+  transform-origin 0 0
+  transform scaleX(0.5)
+  @media (-webkit-min-device-pixel-ratio: 2),(min-device-pixel-ratio: 2)
+    transform scaleX(0.5)
+  @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3)
+    transform scaleX(0.75)
+
+setRightLine(c = $color-border)
+  content " "
+  position absolute
+  right 0
+  top 0
+  width 1px
+  bottom 0
+  border-right 1px solid c
+  color c
+  transform-origin 100% 0
+  transform scaleX(0.5)
+  @media (-webkit-min-device-pixel-ratio: 2),(min-device-pixel-ratio: 2)
+    transform scaleX(0.5)
+  @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3)
+    transform scaleX(0.75)
+

@@ -1,5 +1,5 @@
 <template lang="pug">
-  div.kalix-navigate(:class="{'small':menuChk}")
+  div.kalix-navigate(v-bind:class="{'small':menuChk}")
     ul.bd.bg(v-if="!menuChk")
       li(v-for="item in treeData" v-bind:key="item.id" v-bind:class="{'active':item.isShow}")
         div.s-flex.tit.tit-txt(@click="showTree(item,$event)")
@@ -7,7 +7,7 @@
             i.tit_icon(:class="bindClass(item.iconCls)")
             span.txt {{item.text}}
           div.arrow
-            i(:class="showIcon(item.isShow)")
+            i(v-bind:class="showIcon(item.isShow)")
         el-collapse-transition
           div.mn(v-show="item.isShow")
             ul
@@ -25,7 +25,7 @@
               li.tit(v-for="item in item.children"
               v-bind:key="item.id"
               v-on:click="selectItem(item)")
-                i.tit_icon(:class="bindClass(item.iconCls)")
+                i.tit_icon(v-bind:class="bindClass(item.iconCls)")
                 | {{item.text}}
 </template>
 
