@@ -1,12 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import {Cache} from '../lib'
 import HelloWorld from '@/components/HelloWorld'
 import Home from '@/view/Home'
 import Login from '@/view/Login'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   mode: 'history',
   routes: [
     {
@@ -25,3 +26,12 @@ export default new Router({
     }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  if (Cache.get('id') === null && to.name !== 'login') {
+    next({path: '/login'})
+  }
+  next()
+})
+
+export default router

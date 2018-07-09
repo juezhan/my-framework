@@ -4,6 +4,7 @@ import EventBus from './eventbus'
 import * as Util from './util'
 
 export {
+  Cache,
   Util
 }
 export default {
