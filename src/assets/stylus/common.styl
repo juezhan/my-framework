@@ -1,0 +1,200 @@
+body
+  background url("/static/images/bg.pngcontainer") 50% 0 repeat
+
+.icon-nav
+  display inline-block
+  margin-right 5px
+  background 0 0 no-repeat
+  background-size: 100% 100%;
+  transform: translateY(2px);
+  width 14px
+  height 14px
+  &.icon-user
+    background-image: url('/static/images/icon-user.png')
+  &.icon-edit
+    background-image: url('/static/images/icon-edit.png')
+  &.icon-app
+    background-image: url('/static/images/icon-app.png')
+
+.container
+  margin 0 auto
+  width 1200px
+  height auto
+  &:after
+    display block
+    content ''
+    clear both
+
+.s-flex
+  display flex
+  .s-flex_item
+    flex 1
+
+.sign-dialog
+  .btn-dialog-close
+    position absolute
+    top 0
+    right 0
+    background-color #990000
+    width auto
+    padding 0px 14px
+    color #fff
+    font-size 14px
+    line-height 30px
+    border-radius 0 8px 0 8px
+    cursor pointer
+  .el-dialog
+    border-radius 8px
+  .el-dialog__header,
+  .el-dialog__body
+    padding 0
+  .m-from
+    width 445px
+    margin 0 auto
+    .el-form-item
+      margin-bottom 24px
+      .el-form-item__content
+        line-height 35px
+      .el-form-item__label
+        font-size 18px
+        padding 0
+        height 35px
+        line-height 35px
+      .el-input__inner
+        height 35px
+      .el-input__inner,
+      .el-textarea__inner
+        border-color #a0a0a0
+    .select-items
+      margin-bottom 12px
+    .textarea-item
+      margin-bottom 16px
+
+  .tt
+    text-align center
+    line-height 70px
+    height 70px
+    background-color #eaeaea
+    font-size 30px
+    border-top 2px solid #f7f7f7
+    border-radius 8px 8px 0 0
+
+  .bd
+    padding-top 45px
+    background-color #ffffff
+    border-radius 0 0 8px 8px
+    height 428px
+    box-sizing border-box
+    overflow auto
+  .checkbox
+    cursor pointer
+    .icon-checkbox
+      display inline-block
+      width 16px
+      height 16px
+      border 1px solid #a0a0a0
+      box-sizing border-box
+      float left
+      margin-right 11px
+    &.active
+      .icon-checkbox
+        background url("/static/images/checkbox.png") 50% 50% no-repeat
+        background-size 100% 100%
+
+  .from-item
+    padding-left 146px
+    line-height 16px
+    .checkbox
+      font-size 14px
+    .forget
+      font-size 12px
+      color #999999
+  .btn-bar
+    margin-top 36px
+    text-align center
+    .btn
+      display inline-block
+      width 80px
+      height 30px
+      line-height 30px
+      text-align center
+      font-size 18px
+      color #ffffff
+      background-color #ff4b4b
+      border-radius 2px
+      & + .btn
+        margin-left 69px
+  .btn-bar-b
+    margin-top 30px
+    .btn
+      display block
+      margin 0 auto
+      font-size 18px
+      width 200px
+      height 28px
+      line-height 28px
+      text-align center
+      background-color #ffffff
+      border 1px solid #a0a0a0
+      border-radius 2px
+      cursor pointer
+      &.primary
+        color #ffffff
+        border-color: #ff4b4b
+        background-color #ff4b4b
+      & + .btn
+        margin-top 16px
+  .attribution
+    display flex
+    .item
+      display flex
+      flex 1
+      & + .item
+        margin-left 8px
+      .txt
+        margin-left 8px
+
+.message-form
+  margin 0 100px
+  .el-form-item
+    line-height 25px
+    .el-form-item__label
+      font-size 18px
+      line-height 25px
+      height 25px
+      color #000000
+      padding 0
+    .el-form-item__content
+      line-height 25px
+      .el-input__inner
+        height 25px
+      .el-input__inner,
+      .el-textarea__inner
+        border-radius 0
+        border-color #a0a0a0
+  .txt
+    width 80px
+    font-size 14px
+    color #cccccc
+    margin-left 14px
+    span
+      color #cf0303
+      margin-right 10px
+
+@media screen and (max-width: 1199px)
+  .container
+    width 960px
+
+@media screen and (max-width: 820px)
+  .container
+    max-width 760px
+
+@media screen and (max-width: 768px)
+  .container
+    max-width 728px
+
+@media screen and (max-width: 749px)
+  .container
+    max-width 640px
+    width 94%
+
