@@ -27,8 +27,21 @@ body
 
 .s-flex
   display flex
+  &.flex-column
+    flex-direction column
   .s-flex_item
     flex 1
+
+.frame-row
+  height 100%
+  position relative
+  .frame-col
+    height 100%
+    box-sizing border-box
+    .frame-item
+      position relative
+      & + .frame-item
+        margin-top 10px
 
 .sign-dialog
   .btn-dialog-close
@@ -160,6 +173,13 @@ body
     position absolute
     left -9999em
 
+.has-scroll
+  overflow auto
+
+.table-wrapper
+  height 100%
+  overflow: hidden;
+
 .message-form
   margin 0 100px
   .el-form-item
@@ -186,6 +206,30 @@ body
     span
       color #cf0303
       margin-right 10px
+
+.el-button--primary
+  background-color #f3f3f3
+  border-color #dfdfdf
+  color #707070 !important
+  &:hover,
+  &:focus,
+  &.is-plain
+    background-color #f3f3f3
+    border-color #dfdfdf
+    &:hover,
+    &:focus
+      background-color #f3f3f3
+      border-color #dfdfdf
+
+.down-in-enter-active
+  transition: all 0.2s ease
+
+.down-in-leave-active
+  transition: all 0.2s ease
+
+.down-in-enter, .down-in-leave-active
+  opacity 0
+  transform scale(0.8)
 
 @media screen and (max-width: 1199px)
   .container

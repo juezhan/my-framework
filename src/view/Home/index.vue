@@ -9,8 +9,9 @@
     v-on:onClickUpdateUserInfo="updateUserInfo")
     div.s-flex_item.s-flex
       kalix-navigate(v-bind:cacheTime="7200000" v-bind:url="systemApplicationsBaseURL")
-      div.s-flex_item
-        component(v-bind:is="which_to_show")
+      div.s-flex_item.main-container
+        div.main-container_wrapper
+          component(v-bind:is="which_to_show")
 </template>
 
 <script type="text/ecmascript-6">
@@ -62,8 +63,8 @@
         let app = this.$route.params.app // 应用名称
         let fun = this.$route.params.fun // 功能名称
         // let moduleArr = this.$modulePlugins
-        console.log('APP：', app)
-        console.log('FUN：', fun)
+        // console.log('APP：', app)
+        // console.log('FUN：', fun)
         if (fun !== undefined) {
           /**
            if (moduleArr.length) {
@@ -117,6 +118,7 @@
         this.$refs.userEdit.open(row)
       }
     },
+    watch: {'$route': 'fetchData'},
     components: {
       Welcome,
       KalixHeader,

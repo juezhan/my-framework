@@ -7,6 +7,7 @@
   transition width .2s
   z-index 999
   overflow-y auto
+  background-color #352420
   ul
     li
       width 100%
@@ -19,11 +20,15 @@
         font-size 24px
     &.bg
       li
+        color #a8967d
         .tit
           padding-left 22px
           padding-right 12px
           position relative
           transition color 0.5s
+          border-bottom 1px solid #5b4945
+          &:hover
+            color #d6d9dc
         .txt, .arrow
           transition opacity .2s
         .txt
@@ -33,7 +38,6 @@
         .mn
           .tit
             &:hover
-              background-color #3c4a57
               color #d6d9dc
             padding-left 44px
             &:before
@@ -41,13 +45,14 @@
               left 0
               bottom 0
               width 5px
-              //background-color #42b983
+              background-color #a8967d
               content ''
               position absolute
               display block
               visibility hidden
             &.active
-              background-color #384657
+              background-color #635754
+              font-size 18px
               color #ffffff
               &:before
                 visibility visible

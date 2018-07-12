@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import {Cache} from '../lib'
-import HelloWorld from '@/components/HelloWorld'
 import Home from '@/view/Home'
 import Login from '@/view/Login'
 
@@ -20,15 +19,15 @@ const router = new Router({
       name: 'Home',
       component: Home,
       children: [
-        {path: '/:app', name: 'HelloWorld', component: HelloWorld},
-        {path: '/:app/:fun', name: 'navigater', component: HelloWorld}
+        {path: '/:app', name: 'header', component: Home},
+        {path: '/:app/:fun', name: 'navigater', component: Home}
       ]
     }
   ]
 })
 
 router.beforeEach((to, from, next) => {
-  if (Cache.get('id') === null && to.name !== 'login') {
+  if (Cache.get('id') === null && to.name.toLowerCase() !== 'login') {
     next({path: '/login'})
   }
   next()

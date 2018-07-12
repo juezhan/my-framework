@@ -1,6 +1,30 @@
 @import "./header.styl"
 @import "./navigate.styl"
+@import "./kalix-article.styl"
+@import "./kalix-search.styl"
 
 .kalix-home
   flex-direction column
   height 100%
+  background-color #ebebeb
+  .main-container
+    .main-container_wrapper
+      height 100%
+      padding 10px
+      box-sizing border-box
+
+  //  tree-grid
+  .tree-icon
+    margin-right 8px
+    color #dd9e4a
+    font-weight bold
+    cursor pointer
+
+  .base-teble-operation
+    &.el-button--text
+      font-size 13px
+      cursor pointer
+      color #dd9e4a
+      .kailx-ms-tree-space
+        display inline-block
+        width 1em
